@@ -18,6 +18,8 @@ frontend/node_modules_stale/
 frontend/.tmp-typescript-repair/
 frontend/src/App.tsx
 frontend/src/styles.css
+frontend/*.tsbuildinfo
+backend/*.pt
 dist/
 coverage/
 .pytest_cache/
