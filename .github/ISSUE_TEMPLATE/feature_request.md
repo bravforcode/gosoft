@@ -9,6 +9,3 @@ A clear description of the problem.
 
 **Describe the solution you'd like**
 What you want to happen.
-
-**Alternatives considered**
-Any alternative solutions.
