@@ -1,63 +1,38 @@
-# GOSOFT Smart Inventory Vision
+# Gosoft Retail Tech Hackathon — Smart Shelf Vision AI
 
-This repository is the dedicated home for the Smart Inventory Vision workstream.
-It is intentionally isolated from `vibecity-live` to avoid cross-project drift.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Computer_Vision](https://img.shields.io/badge/Domain-Vision_AI-FF6F00?style=for-the-badge)
+![CCTV](https://img.shields.io/badge/Input-CCTV_Feed-0ea5e9?style=for-the-badge)
+![CP_ALL](https://img.shields.io/badge/By-Gosoft_x_CP_ALL_x_AWS_x_depa-ED1C24?style=for-the-badge)
 
-## Current status
+> **Smart shelf monitoring via CCTV** — retail shelf gap detection with vision AI. Built for Gosoft Retail Tech Hackathon 2026 (CP ALL · AWS · depa · CMKL).
 
-The local-first baseline is up and running without Docker.
+### Demo
 
-Validated on this machine:
+![Demo](https://via.placeholder.com/1280x640/0f172a/38bdf8?text=Smart+Shelf+Vision+AI+Demo+—+Add+docs/demo.gif)
 
-- Backend health: `ok`
-- Frontend dev server: `ok`
-- Backend tests: `26 passed`
-- Frontend tests: `10 passed`
-- API login: `admin / admin123`
+### Architecture
 
-## Local-first workflow
-
-```powershell
-cd C:\vibecity.live\gosoft
-.\scripts\run-local.ps1 -Target all
+```mermaid
+graph LR
+  A[CCTV Feed] --> B[Frame Extractor]
+  B --> C[Object Detection Model]
+  C --> D[Shelf Gap Analyzer]
+  D --> E[Restock Alerts Dashboard]
 ```
 
-Local URLs:
+### Results
 
-- Frontend: `http://127.0.0.1:5175`
-- Backend: `http://127.0.0.1:8000`
-- API docs: `http://127.0.0.1:8000/docs`
+| Metric | Value |
+|---|---|
+| **Achievement** | Certificate of Achievement — Innovation Contributor |
+| **Panel** | AWS · depa · Thai Programmer Association |
 
-Default login:
 
-- `admin / admin123`
-- `manager / manager123`
-- `operator / operator123`
+---
 
-## Operating rule
+**Phirawit Jitnarong — Strategic Full-Stack & AI Engineer**
 
-Before making changes, read:
+xme176@gmail.com · 092-551-0427 · [LinkedIn](https://www.linkedin.com/in/%E0%B8%9E%E0%B8%B5%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%8D%E0%B9%8C-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%93%E0%B8%A3%E0%B8%87%E0%B8%84%E0%B9%8C-0000393a4) · [Fastwork](https://fastwork.co/user/bravforcode?source=search)
 
-1. `SESSION_BOOT.md`
-2. `WORKLOG.md`
-3. `NEXT_STEPS.md`
-4. `ARCHITECTURE.md`
-
-Then check status:
-
-```powershell
-.\scripts\status-local.ps1
-```
-
-If stale processes exist:
-
-```powershell
-.\scripts\stop-local.ps1
-```
-
-## Notes
-
-- Primary runtime is local PowerShell scripts, not Docker
-- Backend runtime data lives under `backend/data/`
-- The fuller SIV source imported from the flash drive is now the active baseline in this repo
-- Redis is optional for the first local boot; the backend can degrade gracefully if it is unavailable
+> Hiring for this stack? Let's talk — production hardened, 300k+ users shipped.
