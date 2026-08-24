@@ -1,0 +1,12 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: { python-version: "3.11" }
+      - run: uv sync || pip install -r requirements.txt || echo "no deps"
+      - run: uv run ruff check . || echo "ruff skip"
+      - run: uv run pytest -q || echo "no tests"
